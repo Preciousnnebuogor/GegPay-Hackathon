@@ -1,7 +1,5 @@
 import { AppImages } from "@/app/utils/AppImages";
 import Image from "next/image";
-import { FaFacebook } from "react-icons/fa";
-import { MdDashboard } from "react-icons/md";
 import styled from "styled-components";
 import { ImageComps } from "./image";
 
