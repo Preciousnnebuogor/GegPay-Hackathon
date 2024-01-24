@@ -1,8 +1,5 @@
+import { AppCore } from "./components/core/core";
 
 export default function Home() {
-  return (
-    <div>
-
-    </div>
-  );
+  return <AppCore />;
 }
