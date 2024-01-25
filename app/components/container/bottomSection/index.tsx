@@ -14,5 +14,5 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   min-height: 400px;
-  background-color: brown;
+  /* background-color: brown; */
 `;
