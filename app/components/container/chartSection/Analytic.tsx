@@ -4,7 +4,7 @@ export function AnalyticTrend() {
   return (
     <Wrapper>
       <div>
-        <p>Analytic Trends</p>
+        <p></p>
       </div>
     </Wrapper>
   );

@@ -3,6 +3,7 @@ import { SalesTrend } from "./Salestrend";
 import { AnalyticTrend } from "./Analytic";
 
 
+
 export function ChartSection() {
   return (
     <Wrapper>
