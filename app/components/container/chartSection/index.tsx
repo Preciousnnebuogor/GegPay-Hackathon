@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import { LastOrder } from "./LastOrder";
-import { TopPlatform } from "./TopPlatform";
+import { SalesTrend } from "./Salestrend";
+import { AnalyticTrend } from "./Analytic";
 
-export function BottonSection() {
+
+export function ChartSection() {
   return (
     <Wrapper>
-      <LastOrder />
+      <SalesTrend/>
       <div className="spacer" />
-      <TopPlatform />
+      <AnalyticTrend/>
     </Wrapper>
   );
 }
