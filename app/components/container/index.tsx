@@ -8,15 +8,16 @@ export function Container() {
     <Wrapper>
       <TopBarComp />
       <div className={"content"}>
-        <ChartSection/>
-        <BottonSection /></div>
+        <ChartSection />
+        <BottonSection />
+      </div>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
-  width:100%;
-  .content{
-    padding:20px;
+  width: 100%;
+  .content {
+    padding: 20px;
   }
 `;

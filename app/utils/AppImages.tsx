@@ -22,4 +22,7 @@ export class AppImages {
   static pic4 = "pic4.svg";
   static pic5 = "pic5.svg";
   static viewAll = "view1.svg"
+  static cube1 = "cube1.svg"
+  static chart1 = "chart1.svg"
+  static arrow1 = "arrow1.svg"
 }

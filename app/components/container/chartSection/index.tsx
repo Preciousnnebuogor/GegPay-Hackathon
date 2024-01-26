@@ -16,7 +16,7 @@ export function ChartSection() {
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
-  min-height: 400px;
+  min-height: calc(50vh - 80px);
   /* background-color: brown; */
   .spacer{
     width: 20px;
