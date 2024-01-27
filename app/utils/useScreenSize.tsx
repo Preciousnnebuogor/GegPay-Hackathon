@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 export function useScreenSize() {
   const [screenSize, setScreenSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: 400,
+    height: 400,
   });
 
   useEffect(() => {

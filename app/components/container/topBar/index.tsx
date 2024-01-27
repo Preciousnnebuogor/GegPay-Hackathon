@@ -2,10 +2,14 @@ import { AppImages } from "@/app/utils/AppImages";
 import Image from "next/image";
 import styled from "styled-components";
 import { Search } from "./search";
+import { BiMenu } from "react-icons/bi";
 export function TopBarComp() {
   return (
     <Wrapper>
-      <h2>Dashboard</h2>
+      <div className="menu">
+        <BiMenu className="icon" />
+        <h2>Dashboard</h2>
+      </div>
       <Search />
       <div className={"section"}>
         <div className={"date"}>
@@ -65,6 +69,20 @@ const Wrapper = styled.div`
     /* display: none; */
     padding: 5px 10px;
     height: 50px;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    .icon {
+      display: none;
+      font-size: larger;
+      font-weight: bold;
+      color: ${(props) => props.theme.colors.primary};
+      margin-right: 10px;
+      @media ${(props) => props.theme.breakpoints.sm} {
+        display: block;
+      }
+    }
   }
   .section {
     display: flex;
