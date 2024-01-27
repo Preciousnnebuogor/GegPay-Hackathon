@@ -3,13 +3,22 @@ import Image from "next/image";
 import styled from "styled-components";
 import { Search } from "./search";
 import { BiMenu } from "react-icons/bi";
+import { useState } from "react";
+import { useScreenSize } from "@/app/utils";
+import MobileNav from "./mobileNav";
+
 export function TopBarComp() {
+  const [showMobileNav, setShowMobileNav] = useState(false);
+  const size = useScreenSize();
+  const toggleNav = () => setShowMobileNav((prev) => !prev);
+  
   return (
     <Wrapper>
       <div className="menu">
-        <BiMenu className="icon" />
+        <BiMenu className="icon" onClick={toggleNav} />
         <h2>Dashboard</h2>
       </div>
+      {size.width < 600 && showMobileNav && <MobileNav />}
       <Search />
       <div className={"section"}>
         <div className={"date"}>
@@ -73,7 +82,7 @@ const Wrapper = styled.div`
   .menu {
     display: flex;
     align-items: center;
-    h2{
+    h2 {
       font-size: 13px;
     }
     .icon {
@@ -121,7 +130,7 @@ const Wrapper = styled.div`
       align-items: center;
       justify-content: center;
       padding: 5px;
-     
+
       .profileImg {
         margin-right: 10px;
       }
