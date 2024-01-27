@@ -73,6 +73,9 @@ const Wrapper = styled.div`
   .menu {
     display: flex;
     align-items: center;
+    h2{
+      font-size: 13px;
+    }
     .icon {
       display: none;
       font-size: larger;
@@ -88,6 +91,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 13px;
     @media ${(props) => props.theme.breakpoints.sm} {
       display: none;
     }
@@ -117,12 +121,12 @@ const Wrapper = styled.div`
       align-items: center;
       justify-content: center;
       padding: 5px;
-
+     
       .profileImg {
         margin-right: 10px;
       }
       .name {
-        font-size: 12px;
+        font-size: 10px;
         margin-right: 10px;
       }
       .icon {

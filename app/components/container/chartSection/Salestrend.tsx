@@ -32,6 +32,7 @@ const Wrapper = styled.div`
   width: 60%;
   height: 100%;
   background-color: ${(props) => props.theme.colors.background2};
+  /* background-color: green; */
   border-radius: 10px;
   margin-bottom: 20px;
   color: ${(props) => props.theme.colors.text1};

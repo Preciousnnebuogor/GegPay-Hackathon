@@ -28,7 +28,7 @@ export function SalesTrendChart() {
   ];
   return (
     <Wrapper>
-      <ResponsiveContainer height={screen.height / 3} width={"100%"}>
+      <ResponsiveContainer height={screen.height / 2} width={"100%"}>
         <BarChart data={data}>
           <Bar dataKey="value" fill="#34caa49a" />
           <CartesianGrid stroke="#edf2e8" vertical={false} />

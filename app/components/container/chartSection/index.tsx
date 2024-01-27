@@ -14,11 +14,14 @@ export function ChartSection() {
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
-  height: 100%;
+  min-height: 250px;
+  /* background-color: green; */
+  margin-bottom: 20px;
   @media ${(props) => props.theme.breakpoints.sm} {
     flex-direction: column;
+    height: auto;
   }
   .spacer {
-    width: 20px;
+    width: 15px;
   }
 `;

@@ -14,12 +14,14 @@ export function BottonSection() {
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
-  min-height: 400px;
+  /* background-color: burlywood; */
+  margin-top: 20px;
+  /* min-height: 400px; */
  
   @media ${(props) => props.theme.breakpoints.sm} {
     flex-direction: column;
   }
   .spacer {
-    width: 20px;
+    width: 15px;
   }
 `;

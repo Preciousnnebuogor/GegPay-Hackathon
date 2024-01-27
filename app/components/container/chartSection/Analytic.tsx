@@ -1,6 +1,5 @@
 import { AppImages } from "@/app/utils/AppImages";
 import styled from "styled-components";
-import Image from "next/image";
 import { AnalyticCard } from "./AnalyticsCard";
 
 export function AnalyticTrend() {
@@ -45,8 +44,8 @@ export function AnalyticTrend() {
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 15px;
+  row-gap: 15px;
   width: 40%;
   margin-bottom: 10px;
   height: 100%;

@@ -17,6 +17,7 @@ export function Container() {
 
 const Wrapper = styled.div`
   width: 100%;
+  height: 400px;
   .content {
     padding: 20px;
   }
