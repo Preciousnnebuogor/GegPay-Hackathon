@@ -15,4 +15,7 @@ export function AppCore() {
 
 const Wrapper = styled.div`
   display: flex;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    flex-direction: column;
+  }
 `;

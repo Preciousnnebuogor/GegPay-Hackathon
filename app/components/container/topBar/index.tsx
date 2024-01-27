@@ -60,11 +60,16 @@ const Wrapper = styled.div`
   width: 100%;
   border-bottom: 2px solid #ebecf2;
   padding: 20px;
-
+  @media ${(props) => props.theme.breakpoints.sm} {
+    /* display: none; */
+  }
   .section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media ${(props) => props.theme.breakpoints.sm} {
+      display: none;
+    }
     .date {
       display: flex;
       align-items: center;
@@ -77,7 +82,7 @@ const Wrapper = styled.div`
       height: 40px;
       width: 40px;
       border-radius: 20px;
-      border: solid 1px #DADDDD;
+      border: solid 1px #dadddd;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -86,11 +91,12 @@ const Wrapper = styled.div`
     .profile {
       margin-left: 10px;
       border-radius: 25px;
-      border: solid 1px #DADDDD;
+      border: solid 1px #dadddd;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 5px;
+
       .profileImg {
         margin-right: 10px;
       }
@@ -99,7 +105,7 @@ const Wrapper = styled.div`
         margin-right: 10px;
       }
       .icon {
-        margin-right:10px;
+        margin-right: 10px;
       }
     }
   }

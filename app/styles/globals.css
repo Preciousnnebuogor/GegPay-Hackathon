@@ -18,7 +18,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #FAFAFA;
+  background: #fafafa;
+  font-size: 100%;
+
+  @media screen and (max-width: 600px) {
+    font-size: 80%;
+  }
 }
 
 @layer utilities {

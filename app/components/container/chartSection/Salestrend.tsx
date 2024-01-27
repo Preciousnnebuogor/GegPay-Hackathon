@@ -7,24 +7,23 @@ export function SalesTrend() {
   return (
     <Wrapper>
       <div className={"content"}>
-        <div className={"trend"}>
-          <p>Sales Trends</p>
-        </div>
-        <div className={"bracket"}>
+        <p className={"first"}>Sales Trends</p>
+
+        <div className={"second"}>
           <p>Short by: </p>
-        </div>
-        <div className={"page"}>
-          <p>Weekly</p>
-          <Image
-            src={AppImages.arrow}
-            alt=""
-            height={17}
-            width={17}
-            className={"icon"}
-          />
+          <div className={"weekly"}>
+            <p>Weekly</p>
+            <Image
+              src={AppImages.arrow}
+              alt=""
+              height={17}
+              width={17}
+              className={"icon"}
+            />
+          </div>
         </div>
       </div>
-      <SalesTrendChart/>
+      <SalesTrendChart />
     </Wrapper>
   );
 }
@@ -32,31 +31,44 @@ export function SalesTrend() {
 const Wrapper = styled.div`
   width: 60%;
   height: 100%;
-  background-color: #8d3434;
+  background-color: ${(props) => props.theme.colors.background2};
   border-radius: 10px;
   margin-bottom: 20px;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+  }
   .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media ${(props) => props.theme.breakpoints.sm} {
+      /* flex-direction: column; */
+    }
+    .first {
+    }
+    .second {
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-    .trend {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      p {
+        margin-right: 20px;
+      }
+      .weekly {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 25px;
+        border: solid 1px ${(props) => props.theme.colors.border};
+        padding: 3.5px 10px;
+        font-family: small;
+        p {
+          margin-right: 10px;
+        }
+      }
     }
-    .bracket {
-      padding-left: 60%;
-    }
-    .page {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-radius: 25px;
-      border: solid 1px #dadddd;
-      padding: 10px;
-      font-family: small;
-    }
+
     .icon {
       margin-left: 5px;
     }

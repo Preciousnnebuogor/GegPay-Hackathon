@@ -45,6 +45,10 @@ const Wrapper = styled.div`
   width: 40%;
   background-color: #ffffff;
   border-radius: 10px;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+    margin-top: 20px;
+  }
   .content {
     display: flex;
     justify-content: space-between;

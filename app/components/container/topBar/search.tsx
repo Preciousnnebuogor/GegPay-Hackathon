@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   background-color: white;
   border: 1px solid #dadddd;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 25px;
   input {
     border: none;
     outline: none;

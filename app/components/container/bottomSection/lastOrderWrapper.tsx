@@ -5,6 +5,9 @@ export const LastOrderWrapper = styled.div`
   height: 100%;
   background-color: #ffffff;
   border-radius: 10px;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+  }
   .topRow {
     display: flex;
     justify-content: space-between;

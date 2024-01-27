@@ -27,7 +27,7 @@ export function SideBar() {
 }
 
 const Wrapper = styled.div`
-  background-color: #F7F8FA;
+  background-color: #f7f8fa;
   height: 100vh;
   width: 80px;
   display: flex;
@@ -36,7 +36,9 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding-top: 20px;
   border-right: 2px solid #ebecf2;
-
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: none;
+  }
   .topSection {
     gap: 10px;
   }

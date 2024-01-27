@@ -2,9 +2,16 @@ import { AppImages } from "@/app/utils/AppImages";
 import styled from "styled-components";
 import Image from "next/image";
 
-export function AnalyticCard() {
+type IProps = {
+  name: string;
+  num: string;
+  isGreen: boolean;
+  percent: string;
+  chartImg: string;
+};
+export function AnalyticCard(props: IProps) {
   return (
-    <Wrapper>
+    <Wrapper $isGreen={props.isGreen}>
       <div className={"content"}>
         <div className={"cube"}>
           <div className={"image1"}>
@@ -12,7 +19,7 @@ export function AnalyticCard() {
           </div>
 
           <Image
-            src={AppImages.chart1}
+            src={props.chartImg}
             alt=""
             height={40}
             width={85}
@@ -20,19 +27,19 @@ export function AnalyticCard() {
           />
         </div>
         <div className={"number"}>
-          <p className={"number1"}>Total Order</p>
-          <p className={"number2"}>350</p>
+          <p className={"number1"}>{props.name}</p>
+          <p className={"number2"}>{props.num}</p>
         </div>
         <div className={"arrow"}>
           <div className={"arrow1"}>
             <Image
-              src={AppImages.arrow1}
+              src={props.isGreen ? AppImages.arrow1 : AppImages.arrow2}
               alt=""
               height={17}
               width={17}
               className={"img"}
             />
-            <p>23,5%</p>
+            <p>{props.percent}</p>
           </div>
           <div className={"arrow2"}>
             <p>vs. previous month</p>
@@ -43,7 +50,7 @@ export function AnalyticCard() {
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ $isGreen: boolean }>`
   background-color: #fff;
   width: 100%;
   border-radius: 10px;
@@ -86,8 +93,8 @@ const Wrapper = styled.div`
       border-radius: 23px;
       font-size: 10px;
       padding: 3px 8px;
-      color: #34caa5;
-      background-color: #34caa51f;
+      color: ${(props) => (props.$isGreen ? "#34caa5" : "#ED544E")};
+      /* background-color: #34caa51f; */
       font-weight: 500;
       margin-right: 5px;
 

@@ -16,7 +16,10 @@ const Wrapper = styled.div`
   display: flex;
   min-height: 400px;
   /* background-color: brown; */
-  .spacer{
+  @media ${(props) => props.theme.breakpoints.sm} {
+    flex-direction: column;
+  }
+  .spacer {
     width: 20px;
   }
 `;

@@ -15,7 +15,9 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   height: 100%;
-  /* background-color: brown; */
+  @media ${(props) => props.theme.breakpoints.sm} {
+    flex-direction: column;
+  }
   .spacer {
     width: 20px;
   }

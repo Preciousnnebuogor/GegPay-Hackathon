@@ -6,10 +6,34 @@ import { AnalyticCard } from "./AnalyticsCard";
 export function AnalyticTrend() {
   return (
     <Wrapper>
-      <AnalyticCard />
-      <AnalyticCard />
-      <AnalyticCard />
-      <AnalyticCard />
+      <AnalyticCard
+        name={"Total Order"}
+        num={"350"}
+        isGreen
+        percent={"23,5%"}
+        chartImg={AppImages.chart1}
+      />
+      <AnalyticCard
+        name={"Total Refund"}
+        num={"270"}
+        isGreen={false}
+        percent={"23,5%"}
+        chartImg={AppImages.chart2}
+      />
+      <AnalyticCard
+        name={"Average Sales"}
+        num={"1567"}
+        isGreen={false}
+        percent={"23,5%"}
+        chartImg={AppImages.chart3}
+      />
+      <AnalyticCard
+        name={"Total Income"}
+        num={"$350.000"}
+        isGreen
+        percent={"23,5%"}
+        chartImg={AppImages.chart4}
+      />
     </Wrapper>
   );
 }
@@ -22,4 +46,8 @@ const Wrapper = styled.div`
   width: 40%;
   margin-bottom: 10px;
   height: 100%;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+    margin-top: 10px;
+  }
 `;
