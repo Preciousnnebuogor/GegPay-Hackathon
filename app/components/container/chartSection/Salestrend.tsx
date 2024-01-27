@@ -34,6 +34,7 @@ const Wrapper = styled.div`
   background-color: ${(props) => props.theme.colors.background2};
   border-radius: 10px;
   margin-bottom: 20px;
+  color: ${(props) => props.theme.colors.text1};
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
@@ -45,6 +46,7 @@ const Wrapper = styled.div`
       /* flex-direction: column; */
     }
     .first {
+      font-size: 12px;
     }
     .second {
       padding-left: 20px;
@@ -54,6 +56,7 @@ const Wrapper = styled.div`
 
       p {
         margin-right: 20px;
+        font-size: 12px;
       }
       .weekly {
         display: flex;
@@ -62,7 +65,7 @@ const Wrapper = styled.div`
         border-radius: 25px;
         border: solid 1px ${(props) => props.theme.colors.border};
         padding: 3.5px 10px;
-        font-family: small;
+        font-size: 10px;
         p {
           margin-right: 10px;
         }

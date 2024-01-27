@@ -43,7 +43,7 @@ export function TopPlatform() {
 const Wrapper = styled.div`
   height: 100%;
   width: 40%;
-  background-color: #ffffff;
+  background-color: ${(props) => props.theme.colors.background2};
   border-radius: 10px;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;

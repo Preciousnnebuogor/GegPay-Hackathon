@@ -2,12 +2,13 @@ import { DefaultTheme } from "styled-components";
 
 export const themeLight: DefaultTheme = {
   colors: {
-    background1: "#FAFAFA",
+    background1: "#f7f8fa",
     background2: "#fff",
     border: "#dadddd",
-    primary: "",
-    text1: "",
-    text2: "",
+    primary: "#34CAA5",
+    secondary: "#6dbeaa",
+    text1: "#000",
+    text2: "grey",
   },
   breakpoints: {
     sm: "screen and (max-width: 600px)",
@@ -15,6 +16,6 @@ export const themeLight: DefaultTheme = {
   },
   borderRadius: {
     section: "20px",
-    card: "10px"
+    card: "10px",
   },
 };

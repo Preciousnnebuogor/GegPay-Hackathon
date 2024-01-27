@@ -13,38 +13,36 @@ type IProps = {
 export function AnalyticCard(props: IProps) {
   return (
     <Wrapper $isGreen={props.isGreen}>
-      <div className={"content"}>
-        <div className={"cube"}>
-          <div className={"image1"}>
-            <Image src={props.boxIcon} alt="" height={17} width={17} />
-          </div>
+      <div className={"cube"}>
+        <div className={"image1"}>
+          <Image src={props.boxIcon} alt="" height={17} width={17} />
+        </div>
 
+        <Image
+          src={props.chartImg}
+          alt=""
+          height={40}
+          width={85}
+          className={"icon"}
+        />
+      </div>
+      <div className={"number"}>
+        <p className={"number1"}>{props.name}</p>
+        <p className={"number2"}>{props.num}</p>
+      </div>
+      <div className={"arrow"}>
+        <div className={"arrow1"}>
           <Image
-            src={props.chartImg}
+            src={props.isGreen ? AppImages.arrow1 : AppImages.arrow2}
             alt=""
-            height={40}
-            width={85}
-            className={"icon"}
+            height={17}
+            width={17}
+            className={"img"}
           />
+          <p>{props.percent}</p>
         </div>
-        <div className={"number"}>
-          <p className={"number1"}>{props.name}</p>
-          <p className={"number2"}>{props.num}</p>
-        </div>
-        <div className={"arrow"}>
-          <div className={"arrow1"}>
-            <Image
-              src={props.isGreen ? AppImages.arrow1 : AppImages.arrow2}
-              alt=""
-              height={17}
-              width={17}
-              className={"img"}
-            />
-            <p>{props.percent}</p>
-          </div>
-          <div className={"arrow2"}>
-            <p>vs. previous month</p>
-          </div>
+        <div className={"arrow2"}>
+          <p>vs. previous month</p>
         </div>
       </div>
     </Wrapper>
@@ -52,9 +50,10 @@ export function AnalyticCard(props: IProps) {
 }
 
 const Wrapper = styled.div<{ $isGreen: boolean }>`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.background2};
   width: 100%;
   border-radius: 10px;
+  padding: 10px;
 
   .cube {
     display: flex;
@@ -74,7 +73,7 @@ const Wrapper = styled.div<{ $isGreen: boolean }>`
   }
 
   .number1 {
-    color: #898989;
+    color: ${(props) => props.theme.colors.text2};
     font-size: 12px;
   }
   .number2 {
@@ -108,8 +107,10 @@ const Wrapper = styled.div<{ $isGreen: boolean }>`
       }
     }
     .arrow2 {
-      font-size: 14px;
-      color: #606060;
+      color: ${(props) => props.theme.colors.text2};
+      p {
+        font-size: 10px;
+      }
     }
   }
 `;

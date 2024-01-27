@@ -42,6 +42,6 @@ export function SalesTrendChart() {
 
 const Wrapper = styled.div`
   /* max-height: 200px; */
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.background2};
   height: 100%;
 `;

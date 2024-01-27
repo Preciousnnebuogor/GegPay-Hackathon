@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const LastOrderWrapper = styled.div`
   width: 60%;
   height: 100%;
-  background-color: #ffffff;
   border-radius: 10px;
+  background-color: ${(props) => props.theme.colors.background2};
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
@@ -24,7 +24,7 @@ export const LastOrderWrapper = styled.div`
     margin-left: 10px;
 
     thead th {
-      color: #9ca4ab;
+      color: ${(props) => props.theme.colors.text1};
       font-weight: 100;
       border-bottom: 1px solid #ebecf2;
       text-align: start;
@@ -35,6 +35,7 @@ export const LastOrderWrapper = styled.div`
       padding: 10px 0;
       height: 40px;
       font-size: small;
+      color: ${(props) => props.theme.colors.text2};
     }
 
     .icon {

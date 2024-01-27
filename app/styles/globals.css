@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+.sample{
+  color: #34CAA5; /* primary */
+  color: #6dbeaa; /* sec */
+  color: #001e28; /* Prim */
+  color: #021117; /* sec */
+}

@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   height: 100vh;
   overflow-y: scroll;
   margin-left: 80px;
+  background-color: ${(props) => props.theme.colors.background1};
   @media ${(props) => props.theme.breakpoints.sm} {
     flex-direction: column;
     margin-left: 0px;

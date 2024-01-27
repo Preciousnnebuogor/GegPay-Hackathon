@@ -35,9 +35,10 @@ const Wrapper = styled.div<{
   $blankWidth: string;
 }>`
   padding: 5px 10px;
- font-size: small;
+  font-size: small;
   .row_title {
     margin-bottom: 5px;
+    color: ${(props) => props.theme.colors.text1};
   }
   .row {
     display: flex;
@@ -65,5 +66,6 @@ const Wrapper = styled.div<{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: ${(props) => props.theme.colors.text2};
   }
 `;

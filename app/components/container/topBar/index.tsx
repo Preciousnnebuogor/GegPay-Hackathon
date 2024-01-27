@@ -53,15 +53,18 @@ export function TopBarComp() {
 }
 
 const Wrapper = styled.div`
-  height: 88px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   border-bottom: 2px solid #ebecf2;
-  padding: 20px;
+  padding: 10px 20px;
+  color: ${(props) => props.theme.colors.text1};
   @media ${(props) => props.theme.breakpoints.sm} {
     /* display: none; */
+    padding: 5px 10px;
+    height: 50px;
   }
   .section {
     display: flex;
