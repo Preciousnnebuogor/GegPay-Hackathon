@@ -8,7 +8,7 @@ export const themeLight: DefaultTheme = {
     primary: "#34CAA5",
     secondary: "#6dbeaa",
     text1: "#000",
-    text2: "grey",
+    text2: "#313131",
   },
   breakpoints: {
     sm: "screen and (max-width: 600px)",

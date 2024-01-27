@@ -4,20 +4,26 @@ import styled from "styled-components";
 import { ImageComps } from "../../sidebar/image";
 import { AppThemeContext } from "@/app/providers/styles";
 
-export default function MobileNav() {
+export default function MobileNav(props: { onClick: VoidFunction }) {
   const context = useContext(AppThemeContext);
   return (
     <Wrapper>
       <div className={"content"}>
-        <ImageComps path={AppImages.logoIcon} />
-        <ImageComps path={AppImages.dashboardIcon} />
-        <ImageComps path={AppImages.thirdIcon} />
-        <ImageComps path={AppImages.icon4} />
-        <ImageComps path={AppImages.icon5} />
-        <ImageComps path={AppImages.icon6} />
-        <ImageComps path={AppImages.icon7} />
-        <ImageComps path={AppImages.icon8} />
-        <ImageComps onClick={context.fn} path={AppImages.icon9} />
+        <ImageComps onClick={props.onClick} path={AppImages.logoIcon} />
+        <ImageComps onClick={props.onClick} path={AppImages.dashboardIcon} />
+        <ImageComps onClick={props.onClick} path={AppImages.thirdIcon} />
+        <ImageComps onClick={props.onClick} path={AppImages.icon4} />
+        <ImageComps onClick={props.onClick} path={AppImages.icon5} />
+        <ImageComps onClick={props.onClick} path={AppImages.icon6} />
+        <ImageComps onClick={props.onClick} path={AppImages.icon7} />
+        <ImageComps onClick={props.onClick} path={AppImages.icon8} />
+        <ImageComps
+          onClick={() => {
+            props.onClick;
+            context.fn;
+          }}
+          path={AppImages.icon9}
+        />
       </div>
     </Wrapper>
   );

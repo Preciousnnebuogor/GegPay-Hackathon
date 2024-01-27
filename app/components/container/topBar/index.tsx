@@ -11,14 +11,14 @@ export function TopBarComp() {
   const [showMobileNav, setShowMobileNav] = useState(false);
   const size = useScreenSize();
   const toggleNav = () => setShowMobileNav((prev) => !prev);
-  
+
   return (
     <Wrapper>
       <div className="menu">
         <BiMenu className="icon" onClick={toggleNav} />
         <h2>Dashboard</h2>
       </div>
-      {size.width < 600 && showMobileNav && <MobileNav />}
+      {size.width < 600 && showMobileNav && <MobileNav onClick={toggleNav} />}
       <Search />
       <div className={"section"}>
         <div className={"date"}>
