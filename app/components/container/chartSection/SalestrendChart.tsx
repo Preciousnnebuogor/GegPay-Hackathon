@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import React from "react";
-import { BarChart, Bar, CartesianGrid, XAxis, YAxis } from "recharts";
+import {
+  BarChart,
+  Bar,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  ResponsiveContainer,
+} from "recharts";
 export function SalesTrendChart() {
   const data = [
     { name: "jan", value: 50 },
@@ -18,14 +25,19 @@ export function SalesTrendChart() {
   ];
   return (
     <Wrapper>
-      <BarChart width={700} height={200} data={data}>
-        <Bar dataKey="value" fill="#34caa49a" />
-        <CartesianGrid stroke="#edf2e8" vertical={false} />
-        <XAxis dataKey="name" />
-        <YAxis  />
-      </BarChart>
+      <ResponsiveContainer height={200} width={"100%"}>
+        <BarChart data={data}>
+          <Bar dataKey="value" fill="#34caa49a" />
+          <CartesianGrid stroke="#edf2e8" vertical={false} />
+          <XAxis dataKey="name" />
+          <YAxis />
+        </BarChart>
+      </ResponsiveContainer>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  max-height: 200px;
+  background-color: #fff;
+`;

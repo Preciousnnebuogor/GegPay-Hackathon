@@ -32,7 +32,7 @@ export function SalesTrend() {
 const Wrapper = styled.div`
   width: 60%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #8d3434;
   border-radius: 10px;
   margin-bottom: 20px;
   .content {
