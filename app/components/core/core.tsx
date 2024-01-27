@@ -15,7 +15,11 @@ export function AppCore() {
 
 const Wrapper = styled.div`
   display: flex;
+  height: 100vh;
+  overflow-y: scroll;
+  margin-left: 80px;
   @media ${(props) => props.theme.breakpoints.sm} {
     flex-direction: column;
+    margin-left: 0px;
   }
 `;

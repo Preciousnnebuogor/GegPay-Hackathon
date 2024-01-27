@@ -12,6 +12,7 @@ export function AnalyticTrend() {
         isGreen
         percent={"23,5%"}
         chartImg={AppImages.chart1}
+        boxIcon={AppImages.cube1}
       />
       <AnalyticCard
         name={"Total Refund"}
@@ -19,6 +20,7 @@ export function AnalyticTrend() {
         isGreen={false}
         percent={"23,5%"}
         chartImg={AppImages.chart2}
+        boxIcon={AppImages.cube2}
       />
       <AnalyticCard
         name={"Average Sales"}
@@ -26,6 +28,7 @@ export function AnalyticTrend() {
         isGreen={false}
         percent={"23,5%"}
         chartImg={AppImages.chart3}
+        boxIcon={AppImages.cube3}
       />
       <AnalyticCard
         name={"Total Income"}
@@ -33,6 +36,7 @@ export function AnalyticTrend() {
         isGreen
         percent={"23,5%"}
         chartImg={AppImages.chart4}
+        boxIcon={AppImages.cube4}
       />
     </Wrapper>
   );

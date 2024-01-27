@@ -36,6 +36,11 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding-top: 20px;
   border-right: 2px solid #ebecf2;
+  overflow-y: hidden;
+  scroll-behavior: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
   @media ${(props) => props.theme.breakpoints.sm} {
     display: none;
   }

@@ -8,6 +8,7 @@ type IProps = {
   isGreen: boolean;
   percent: string;
   chartImg: string;
+  boxIcon: string;
 };
 export function AnalyticCard(props: IProps) {
   return (
@@ -15,7 +16,7 @@ export function AnalyticCard(props: IProps) {
       <div className={"content"}>
         <div className={"cube"}>
           <div className={"image1"}>
-            <Image src={AppImages.cube1} alt="" height={17} width={17} />
+            <Image src={props.boxIcon} alt="" height={17} width={17} />
           </div>
 
           <Image
@@ -94,6 +95,10 @@ const Wrapper = styled.div<{ $isGreen: boolean }>`
       font-size: 10px;
       padding: 3px 8px;
       color: ${(props) => (props.$isGreen ? "#34caa5" : "#ED544E")};
+      background-color: ${(props) =>
+        props.$isGreen
+          ? "rgba(52, 202, 165, 0.12)"
+          : "rgba(237, 84, 78, 0.12)"};
       /* background-color: #34caa51f; */
       font-weight: 500;
       margin-right: 5px;
